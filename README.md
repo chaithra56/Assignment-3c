@@ -38,7 +38,10 @@ write_tsv(Viperidae, "Viperidae_BOLD_data.tsv")
 viper <- read_tsv("Viperidae_BOLD_data.tsv")
 
 rm(Viperidae)
-#the data of Viperidae and viper are same. Downloading the same file multiple times effects the storage. Users may encounter difficulties when they ran out of data.  
+#the data of Viperidae and viper are same. Downloading the same file multiple times effects the storage. Users may encounter difficulties when they ran out of data.
+
+
+  
 
 #Read data from BOLD and created a file in case a duplicate of the original file is required. 
 # PART C3: FILTER AND TIDY UP DATA TO BE USED FOR PHYLOGENETIC ANALYSIS ----
@@ -57,10 +60,13 @@ Sequence.Crotalinae <- Sequence.Viperidae %>%
   filter(str_detect(subfamily_name, "Crotalinae")) %>%
   filter(str_detect(nucleotides, "AGTC"))
 #Created a dataframe that has the Crotalinae sequences only.
+
 # to perform some functions like alignments or to plot a data the data shouldn't be null. In order to eliminate the empty data the function na.omit can be used. For example :
 length(viper$nucleotides)
 Fulltest <- na.omit(viper$nucleotides)
 length(Fulltest)
+
+
 
 # PART C4: RANDOMLY SAMPLE SEQUENCES PER COUNTRY ----
 
