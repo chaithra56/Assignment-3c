@@ -38,10 +38,8 @@ write_tsv(Viperidae, "Viperidae_BOLD_data.tsv")
 viper <- read_tsv("Viperidae_BOLD_data.tsv")
 
 rm(Viperidae)
-#the data of Viperidae and viper are same. Downloading the same file multiple times effects the storage. Users may encounter difficulties when they ran out of data.
+#the data of Viperidae and viper are same. Viper data is used to perform other functions in the program so the data of Viperidae can be eliminated to save the storage space.
 
-
-  
 
 #Read data from BOLD and created a file in case a duplicate of the original file is required. 
 # PART C3: FILTER AND TIDY UP DATA TO BE USED FOR PHYLOGENETIC ANALYSIS ----
